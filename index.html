@@ -5,14 +5,22 @@
 <script>
 require(["esri/map", "dojo/domReady!"], function(Map) { 
   var map = new Map("map", {
-    center: [-118, 34.5],
-    zoom: 8,
+    center: [149.1, -35.3],
+    zoom: 12,
     basemap: "topo"
   });
+  navigator.geolocation.getCurrentPosition(showPosition);
+  function showPosition(position){
+    
+  };
 });
+
 </script>
 <body>
-  <h1>I love working with my wife Saya, who is the world's most beautiful woman.</h1>
+  <h1>I love working with my wife.<br/>
+	
+	
+  </h1>
 	<div id="map"></div>
 </body>
 </html>
