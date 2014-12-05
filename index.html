@@ -10,17 +10,17 @@ require(["esri/map", "dojo/domReady!"], function(Map) {
     basemap: "topo"
   });
   navigator.geolocation.getCurrentPosition(showPosition);
+  var coords = getElementById('coords');
+  coords.innerHTML = 'temp';
   function showPosition(position){
-    
+	coords.innerHTML = position.coords.latitude;
   };
 });
 
 </script>
 <body>
-  <h1>I love working with my wife.<br/>
-	
-	
-  </h1>
+  <h1>I love working with my wife.</h1>
+  <h2 id="coords">foo</h2>
 	<div id="map"></div>
 </body>
 </html>
