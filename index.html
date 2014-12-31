@@ -2,25 +2,10 @@
 <head>
 <link rel="stylesheet" href="http://js.arcgis.com/3.11/esri/css/esri.css">
 <script src="http://js.arcgis.com/3.11/"></script>
-<script>
-require(["esri/map", "dojo/domReady!"], function(Map) { 
-  var map = new Map("map", {
-    center: [149.1, -35.3],
-    zoom: 12,
-    basemap: "topo"
-  });
-  navigator.geolocation.getCurrentPosition(showPosition);
-  var coords = getElementById('coords');
-  coords.innerHTML = 'temp';
-  function showPosition(position){
-	coords.innerHTML = position.coords.latitude;
-  };
-});
-
-</script>
+<script src="js/main.js"></script>
 <body>
   <h1>I love working with my wife.</h1>
-  <h2 id="coords">foo</h2>
+  <h2 id="coords">foo2</h2>
 	<div id="map"></div>
 </body>
 </html>
